@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
 <div class="showcase is-loading" {{ if .Paginator.HasNext }}data-next-url="{{ .Paginator.Next.URL }}"{{ end }}>
-  {{ range (where .Paginator.Pages "Type" "works") }}
+  {{ range (where .Paginator.Pages "Type" "services") }}
     <div class="showcase__item">
       <figure class="card">
         <a href="{{ .Permalink }}" class="card__image">
