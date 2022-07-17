@@ -71,8 +71,8 @@ module.exports = (dato, root, i18n) => {
 
   // Create a `service` directory (or empty it if already exists)...
   root.directory('content/services', dir => {
-    // ...and for each of the works stored online...
-    dato.works.forEach((service, index) => {
+    // ...and for each of the services stored online...
+    dato.services.forEach((service, index) => {
       // ...create a markdown file with all the metadata in the frontmatter
       dir.createPost(`${service.slug}.md`, 'yaml', {
         frontmatter: {
