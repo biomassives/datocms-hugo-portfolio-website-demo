@@ -13,13 +13,33 @@
     {{ else }}
       {{ .Site.Data.settings.seoMetaTags | safeHTML }}
     {{ end }}
+    <style>
+      .textheader {
+        width: 600px;
+        height: 250px;
+        margin: 50px;
+        outline: solid 1px black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .headercontent {
+        size: 30px;
+        width: 500px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: black;
+      }
+    </style>
   </head>
   <body>
     
-         <div class="sidebar__intro" style="size:24pt;">
+         <div class="textheader">
+            <div class="headercontent">
             {{ .Site.Data.settings.intro | markdownify }}
+            </div>
          </div>
-    
     
     <div class="container">
       
