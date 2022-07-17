@@ -10,6 +10,11 @@ Paginate = 5
   identifier = "home"
   url = "/"
 
+  name = "Donations"
+  weight = 1
+  identifier = "donations"
+  url = "/donations"
+
 # datocms:start
 title = "SCDHub.org."
 languageCode = "en"
