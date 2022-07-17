@@ -69,25 +69,25 @@ module.exports = (dato, root, i18n) => {
     content: dato.aboutPage.bio
   });
 
-  // Create a `work` directory (or empty it if already exists)...
-  root.directory('content/works', dir => {
+  // Create a `service` directory (or empty it if already exists)...
+  root.directory('content/services', dir => {
     // ...and for each of the works stored online...
-    dato.works.forEach((work, index) => {
+    dato.works.forEach((service, index) => {
       // ...create a markdown file with all the metadata in the frontmatter
-      dir.createPost(`${work.slug}.md`, 'yaml', {
+      dir.createPost(`${service.slug}.md`, 'yaml', {
         frontmatter: {
-          title: work.title,
-          coverImage: work.coverImage.url({ w: 450, fm: 'jpg', auto: 'compress' }),
-          image: work.coverImage.url({ fm: 'jpg', auto: 'compress' }),
-          detailImage: work.coverImage.url({ w: 600, fm: 'jpg', auto: 'compress' }),
-          excerpt: work.excerpt,
-          seoMetaTags: toHtml(work.seoMetaTags),
-          extraImages: work.gallery.map(item =>
+          title: service.title,
+          coverImage: service.coverImage.url({ w: 450, fm: 'jpg', auto: 'compress' }),
+          image: service.coverImage.url({ fm: 'jpg', auto: 'compress' }),
+          detailImage: service.coverImage.url({ w: 600, fm: 'jpg', auto: 'compress' }),
+          excerpt: service.excerpt,
+          seoMetaTags: toHtml(service.seoMetaTags),
+          extraImages: service.gallery.map(item =>
             item.url({ h: 300, fm: 'jpg', auto: 'compress' })
           ),
           weight: index
         },
-        content: work.description
+        content: service.description
       });
     });
   });
