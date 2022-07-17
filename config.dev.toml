@@ -9,8 +9,13 @@ Paginate = 5
   weight = 1
   identifier = "home"
   url = "/"
+[[menu.main]]
+  name = "Donations"
+  weight = 2
+  identifier = "donations"
+  url = "/donations"
 
 # datocms:start
-title = "Creative Inc."
+title = "SCD Hub"
 languageCode = "en"
 # datocms:end
