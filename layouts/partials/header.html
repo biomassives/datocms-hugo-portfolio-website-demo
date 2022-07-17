@@ -32,11 +32,7 @@
   </head>
   <body>
     
-         <div class="textheader">
-            <div class="headercontent">
-              <h2>{{ .Site.Data.settings.intro | markdownify }}</h2>
-            </div>
-         </div>
+
     
     <div class="container">
       
@@ -82,4 +78,9 @@
               <a href="/index.html">{{ .Site.Data.settings.name }}</a>
             </div>
           </div>
+            <div class="textheader">
+              <div class="headercontent">
+                <h2>{{ .Site.Data.settings.intro | markdownify }}</h2>
+              </div>
+            </div>
         </div>
