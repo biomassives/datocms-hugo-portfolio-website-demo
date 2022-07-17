@@ -15,10 +15,9 @@
     {{ end }}
     <style>
       .textheader {
-        width: 600px;
+        width: 100%;
         height: 250px;
         margin: 50px;
-        outline: solid 1px black;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -26,7 +25,7 @@
 
       .headercontent {
         size: 30px;
-        width: 500px;
+        width: 600px;
         height: 150px;
         border-radius: 50%;
         background-color: black;
@@ -37,7 +36,7 @@
     
          <div class="textheader">
             <div class="headercontent">
-            {{ .Site.Data.settings.intro | markdownify }}
+              <h2>{{ .Site.Data.settings.intro | markdownify }}</h2>
             </div>
          </div>
     
@@ -46,9 +45,12 @@
       
       <div class="container__sidebar">
         <div class="sidebar">
-          <h6 class="sidebar__title">
-            <a href="/">{{ .Site.Data.settings.name }}</a>
-          </h6>
+          <table><tr>
+            <td><img src="https://scdhub.org/images/logo.svg"></td>
+            <td><h6 class="sidebar__title">
+              <a href="/">{{ .Site.Data.settings.name }}</a>
+            </h6></td>
+          </tr></table>
 
 
 
