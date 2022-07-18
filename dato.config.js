@@ -69,6 +69,42 @@ module.exports = (dato, root, i18n) => {
     content: dato.aboutPage.bio
   });
 
+
+  // Create a markdown file with content coming from the `about_page` item
+  // type stored in DatoCMS
+  root.createPost(`content/donate.md`, 'yaml', {
+    frontmatter: {
+      title: dato.donatePage.title,
+      subtitle: dato.donatePage.subtitle,
+      photo: dato.donatePage.photo.url({ w: 800, fm: 'jpg', auto: 'compress' }),
+      seoMetaTags: toHtml(dato.donatePage.seoMetaTags),
+      menu: { main: { weight: 100 } }
+    },
+    content: dato.donatePage.bio
+  });
+
+    // Create a markdown file with content coming from the `about_page` item
+  // type stored in DatoCMS
+  root.createPost(`content/newsletter.md`, 'yaml', {
+    frontmatter: {
+      title: dato.newsletterPage.title,
+      subtitle: dato.newsletterPage.subtitle,
+      photo: dato.newsletterPage.photo.url({ w: 800, fm: 'jpg', auto: 'compress' }),
+      seoMetaTags: toHtml(dato.newsletterPage.seoMetaTags),
+      menu: { main: { weight: 100 } }
+    },
+    content: dato.newsletterPage.bio
+  });
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
   // Create a `service` directory (or empty it if already exists)...
   root.directory('content/services', dir => {
     // ...and for each of the services stored online...
