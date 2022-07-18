@@ -10,10 +10,15 @@ Paginate = 5
   identifier = "home"
   url = "/"
 [[menu.main]]
-  name = "Donations"
-  weight = 2
-  identifier = "donations"
-  url = "/donations"
+  name = "Donate"
+  weight = 1
+  identifier = "donate"
+  url = "/donate"
+[[menu.main]]
+  name = "Newsletter"
+  weight = 1
+  identifier = "newsletter"
+  url = "/newsletter"
 
 # datocms:start
 title = "SCD Hub"
