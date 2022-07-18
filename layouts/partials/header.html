@@ -13,18 +13,40 @@
     {{ else }}
       {{ .Site.Data.settings.seoMetaTags | safeHTML }}
     {{ end }}
+    <style>
+      .textheader {
+        width: 100%;
+        height: 250px;
+        margin: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .headercontent {
+        font-size: 30px;
+        width: 80%;
+        height: 150px;        
+      }
+    </style>
   </head>
   <body>
+    
+
+    
     <div class="container">
+      
+      
       <div class="container__sidebar">
         <div class="sidebar">
-          <h6 class="sidebar__title">
-            <a href="/">{{ .Site.Data.settings.name }}</a>
-          </h6>
+          <table><tr>
+            <td valign=top><img src="https://scdhub.org/images/logo.svg" height=100 width=100></td>
+            <td valign=top><h6>
+              <a href="/">{{ .Site.Data.settings.name }}</a>
+            </h6></td>
+          </tr></table>
 
-          <div class="sidebar__intro">
-            {{ .Site.Data.settings.intro | markdownify }}
-          </div>
+
 
           <ul class="sidebar__menu">
             {{ $currentNode := . }}
@@ -56,4 +78,9 @@
               <a href="/index.html">{{ .Site.Data.settings.name }}</a>
             </div>
           </div>
+            <div class="textheader">
+              <div class="headercontent">
+                <h2>{{ .Site.Data.settings.intro | markdownify }}</h2>
+              </div>
+            </div>
         </div>
