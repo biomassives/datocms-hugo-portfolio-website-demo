@@ -75,9 +75,11 @@
               <a href="/index.html">{{ .Site.Data.settings.name }}</a>
             </div>
           </div>
+          {{ if .IsHome }}
             <div class="textheader">
               <div class="headercontent">
                 <h2>{{ .Site.Data.settings.intro | markdownify }}</h2>
               </div>
             </div>
+          {{ end }}
         </div>
