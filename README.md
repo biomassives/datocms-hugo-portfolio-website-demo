@@ -1,4 +1,4 @@
-# SCd Hub Website
+# SCD Hub Website
 
 -
 uses datocms.com for content and hugo build tool from code on github.com, built via netlify.com or vercel.com
