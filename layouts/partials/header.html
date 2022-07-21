@@ -21,7 +21,9 @@
       }
 
       .headercontent {
-        font-size: 30px;
+          font-family: Georgia, serif;
+          font-weight: bold;
+          font-variant: small-caps;
       }
     </style>
   </head>
@@ -58,7 +60,7 @@
           {{ if .IsHome }}
             <div class="textheader">
               <div class="headercontent">
-                <h2>{{ .Site.Data.settings.intro | markdownify }}</h2>
+                {{ .Site.Data.settings.intro | markdownify }}
               </div>
             </div>
           {{ end }}
