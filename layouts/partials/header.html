@@ -31,10 +31,7 @@
     
     <div class="container">
       <div class="container__sidebar">
-
-          <table><tr>
-            <td valign=top><img title="{{ .Site.Data.settings.name }}" src="https://scdhub.org/images/logo.svg" style="height:250px;width=250px;">
-
+          <img title="{{ .Site.Data.settings.name }}" src="https://scdhub.org/images/logo.svg" style="height:250px;width=250px;">
           <ul class="sidebar__menu">
             {{ $currentNode := . }}
             {{ range .Site.Menus.main }}
@@ -43,27 +40,19 @@
               </li>
             {{ end }}
           </ul>
-
           <p class="sidebar__social">
             {{ range .Site.Data.settings.socialProfiles }}
               <a href="{{ .url }}" class="social social--{{ .type }}"></a>
             {{ end }}
           </p>
-
           <div class="sidebar__copyright">
             {{ .Site.Data.settings.copyright }}
           </div>
-
-          </td><td valign=top>            
-            <div class="mobile-header__menu">
-              <a href="#" class="hamburger"></a>
-            </div>
-            
+         </div>
+        
             <div class="mobile-header__logo">
               <a href="/index.html">{{ .Site.Data.settings.name }}</a>
-            </div>
-            
-          </div>
+            </div>          
         
         
           {{ if .IsHome }}
