@@ -54,3 +54,21 @@ This websites uses:
 To convert the content stored on DatoCMS into local Markdown files that can be digested by Hugo, the datocms-client plugin requires an explicit mapping file called [`dato.config.js`](https://github.com/datocms/hugo-portfolio/blob/master/dato.config.js). You can read more about the commands available in this file [in the official documentation](https://docs.datocms.com/hugo/overview.html).
 
 
+--
+layout snippets
+--
+
+    <div class="showcase__item">
+      <figure class="card" style="
+             visibility:none; 
+             display: flex; 
+             flex-grow: 1;
+             padding: 2rem;
+             overflow-y: scroll;
+             display: flex;
+             flex-wrap: wrap;
+             justify-content: space-around;
+      ">
+      </figure>
+    </div>
+
