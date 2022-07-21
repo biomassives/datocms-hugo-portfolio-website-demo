@@ -1,4 +1,8 @@
-# Hugo Portfolio Website
+# SCd Hub Website
+
+-
+uses datocms.com for content and hugo build tool from code on github.com, built via netlify.com or vercel.com
+-
 
 This repo contains a working static website written with [Hugo](http://gohugo.io/), integrated with content coming from DatoCMS.
 
