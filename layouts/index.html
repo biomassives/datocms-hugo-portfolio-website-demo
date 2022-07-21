@@ -1,19 +1,7 @@
 {{ partial "header.html" . }}
 
 <div class="showcase is-loading" style="visibility:none; display: flex;" {{ if .Paginator.HasNext }}data-next-url="{{ .Paginator.Next.URL }}"{{ end }}>
-    <div class="showcase__item">
-      <figure class="card" style="
-             visibility:none; 
-             display: flex; 
-             flex-grow: 1;
-             padding: 2rem;
-             overflow-y: scroll;
-             display: flex;
-             flex-wrap: wrap;
-             justify-content: space-around;
-      ">
-      </figure>
-    </div>
+
         
         
   {{ range (where .Paginator.Pages "Type" "services") }}
