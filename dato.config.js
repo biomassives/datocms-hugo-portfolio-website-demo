@@ -97,6 +97,19 @@ module.exports = (dato, root, i18n) => {
   });
 
   
+  // Create a markdown file with content coming from the `about_page` item
+  // type stored in DatoCMS
+  root.createPost(`content/contact.md`, 'yaml', {
+    frontmatter: {
+      title: dato.contactPage.title,
+      subtitle: dato.contactPage.subtitle,
+      photo: dato.contactPage.photo.url({ w: 800, fm: 'jpg', auto: 'compress' }),
+      seoMetaTags: toHtml(dato.contactPage.seoMetaTags),
+      menu: { main: { weight: 101 } }
+    },
+    content: dato.contactPage.bio
+  });
+
   
   
   
