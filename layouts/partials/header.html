@@ -16,7 +16,6 @@
     <style>
       .textheader {
         margin: 50px;
-        display: flex;
         justify-content: center;
         align-items: center;
       }
@@ -31,15 +30,12 @@
 
     
     <div class="container">
-      
-      
       <div class="container__sidebar">
+
         <div class="sidebar">
+
           <table><tr>
-            <td valign=top><img title="{{ .Site.Data.settings.name }}" src="https://scdhub.org/images/logo.svg" style="height:250px;width=250px;"></td>
-          </tr></table>
-
-
+            <td valign=top><img title="{{ .Site.Data.settings.name }}" src="https://scdhub.org/images/logo.svg" style="height:250px;width=250px;">
 
           <ul class="sidebar__menu">
             {{ $currentNode := . }}
@@ -59,16 +55,19 @@
           <div class="sidebar__copyright">
             {{ .Site.Data.settings.copyright }}
           </div>
-        </div>
-      
-          <div class="mobile-header">
+
+          </td><td valign=top>            
             <div class="mobile-header__menu">
               <a href="#" class="hamburger"></a>
             </div>
+            
             <div class="mobile-header__logo">
               <a href="/index.html">{{ .Site.Data.settings.name }}</a>
             </div>
+            
           </div>
+        
+        
           {{ if .IsHome }}
             <div class="textheader">
               <div class="headercontent">
@@ -76,4 +75,7 @@
               </div>
             </div>
           {{ end }}
-\
+        
+           
+            
+        
