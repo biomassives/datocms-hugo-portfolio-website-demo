@@ -5,6 +5,11 @@ Paginate = 5
   env = "production"
 
 
+[[menu.main]]
+  name = "Home"
+  weight = 1
+  identifier = "home"
+  url = "/"
 
 # datocms:start
 title = "SCDHub.org"
