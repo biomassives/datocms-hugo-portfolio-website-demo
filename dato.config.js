@@ -53,7 +53,12 @@ module.exports = (dato, root, i18n) => {
       };
     }),
     faviconMetaTags: toHtml(dato.site.faviconMetaTags),
-    seoMetaTags: toHtml(dato.home.seoMetaTags)
+    seoMetaTags: toHtml(dato.home.seoMetaTags),
+    footerCol1: toHtml(dato.home.col_footer1),
+    footerCol2: toHtml(dato.home.column_footer2),
+    footerCol3: toHtml(dato.home.column_footer3),
+    footerCol4: toHtml(dato.home.column_footer4)
+
   });
 
   // Create a markdown file with content coming from the `about_page` item
