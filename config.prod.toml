@@ -4,19 +4,9 @@ Paginate = 5
 [params]
   env = "production"
 
-[[menu.main]]
-  name = "Home"
-  weight = 1
-  identifier = "home"
-  url = "/"
-[[menu.main]]
-  name = "Newsletter"
-  weight = 2
-  identifier = "newsletter"
-  url = "/newsletter"
 
 
 # datocms:start
-title = "SCDHub.org."
+title = "SCDHub.org"
 languageCode = "en"
 # datocms:end
