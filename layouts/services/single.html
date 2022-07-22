@@ -2,9 +2,9 @@
 
 <article class="sheet" style="float:1;margin-left: auto">
   <div class="sheet__inner" style="display: flex; margin-left: auto;">
-    <h1 class="sheet__title">{{ .Title }}</h1>
-    <p class="sheet__lead">{{ .Params.excerpt }}</p>
-    <div class="sheet__slider">
+    <div class="sheet__title" style="display: flex; margin-left: auto;">{{ .Title }}</div>
+    <div class="sheet__lead" style="display: flex; margin-left: auto;">{{ .Params.excerpt }}</div>
+    <div class="sheet__slider" style="display: flex; margin-left: auto;">
       <div class="slider js_slider">
         <div class="slider__frame js_frame">
           <ul class="slider__slides js_slides">
@@ -19,10 +19,10 @@
         <span class="slider__next js_next"></span>
       </div>
     </div>
-    <div class="sheet__body" style="flex: 1;">
+    <div style="display: flex; margin-left: auto;" class="sheet__body" style="flex: 1;">
       {{ .Content }}
     </div>
-    <div class="sheet__gallery">
+    <div style="display: flex; margin-left: auto;" class="sheet__gallery">
       <img src="{{ .Params.detailimage }}" />
     </div>
   </div>
