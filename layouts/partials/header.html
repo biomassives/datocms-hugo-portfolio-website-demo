@@ -13,8 +13,10 @@
     {{ else }}
       {{ .Site.Data.settings.seoMetaTags | safeHTML }}
     {{ end }}
-    <link rel="stylesheet" href="https://unpkg.com/mustard-ui@1.0.4/dist/css/mustard-ui.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/src/scss/vars/colors.scss">
+    {{ if isset .Params "mustardui_header" }}
+      <link rel="stylesheet" href="https://unpkg.com/mustard-ui@1.0.4/dist/css/mustard-ui.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/src/scss/vars/colors.scss">
+    {{ end }}
     
     <link rel="icon" type="image/x-icon" href="https://www.datocms-assets.com/76676/1658430454-favicon.ico">
     <style>
