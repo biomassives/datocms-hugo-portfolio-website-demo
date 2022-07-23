@@ -3,6 +3,7 @@
 -
 uses datocms.com for content and hugo build tool from code on github.com, built via netlify.com or vercel.com
 -
+customized template removing hamburger sidebar interaction
 
 This repo contains a working static website written with [Hugo](http://gohugo.io/), integrated with content coming from DatoCMS.
 
@@ -57,6 +58,17 @@ This websites uses:
 
 To convert the content stored on DatoCMS into local Markdown files that can be digested by Hugo, the datocms-client plugin requires an explicit mapping file called [`dato.config.js`](https://github.com/datocms/hugo-portfolio/blob/master/dato.config.js). You can read more about the commands available in this file [in the official documentation](https://docs.datocms.com/hugo/overview.html).
 
+--
+layout / index.html
+--
+
+<code>
+/*
+        <! a href="{{ .Permalink }}" class="card__image">
+        <! /a>
+            <! a href="{{ .Permalink }}"><! /a>
+*/
+</code>
 
 --
 layout snippets
