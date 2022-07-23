@@ -53,11 +53,7 @@ module.exports = (dato, root, i18n) => {
       };
     }),
     faviconMetaTags: toHtml(dato.site.faviconMetaTags),
-    seoMetaTags: toHtml(dato.home.seoMetaTags),
-    footerCol1: toHtml(dato.home.colFooter1),
-    footerCol2: toHtml(dato.home.columnFooter2),
-    footerCol3: toHtml(dato.home.columnFooter3),
-    footerCol4: toHtml(dato.home.columnFooter4)
+    seoMetaTags: toHtml(dato.home.seoMetaTags)
 
   });
 
