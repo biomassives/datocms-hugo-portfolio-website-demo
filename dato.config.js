@@ -115,6 +115,30 @@ module.exports = (dato, root, i18n) => {
   
   
   
+    // Create a `service` directory (or empty it if already exists)...
+  root.directory('content/blog', dir => {
+    // ...and for each of the services stored online...
+    dato.blogs.forEach((blog, index) => {
+      // ...create a markdown file with all the metadata in the frontmatter
+      dir.createPost(`${blog.slug}.md`, 'yaml', {
+        frontmatter: {
+          title: blog.title,
+          coverImage: blog.coverImage.url({ w: 450, fm: 'jpg', auto: 'compress' }),
+          image: blog.coverImage.url({ fm: 'jpg', auto: 'compress' }),
+          detailImage: blog.coverImage.url({ w: 600, fm: 'jpg', auto: 'compress' }),
+          excerpt: blog.excerpt,
+          seoMetaTags: toHtml(blog.seoMetaTags),
+          extraImages: blog.gallery.map(item =>
+            item.url({ h: 300, fm: 'jpg', auto: 'compress' })
+          ),
+          weight: index
+        },
+        content: blog.description
+      });
+    });
+  });
+  
+  
   
   
   
