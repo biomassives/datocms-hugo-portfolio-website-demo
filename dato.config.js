@@ -94,7 +94,7 @@ module.exports = (dato, root, i18n) => {
       seoMetaTags: toHtml(dato.newsletterPage.seoMetaTags),
       menu: { main: { weight: 100 } }
     },
-    content: dato.newsletterPage.bio
+    content: dato.newsletterPage.content
   });
 
   
@@ -108,7 +108,7 @@ module.exports = (dato, root, i18n) => {
       seoMetaTags: toHtml(dato.contactPage.seoMetaTags),
       menu: { main: { weight: 101 } }
     },
-    content: dato.contactPage.bio
+    content: dato.contactPage.content
   });
 
   
