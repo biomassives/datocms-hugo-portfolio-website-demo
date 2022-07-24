@@ -44,6 +44,7 @@ module.exports = (dato, root, i18n) => {
     name: dato.site.globalSeo.siteName,
     language: dato.site.locales[0],
     intro: dato.home.introText,
+    footer1: dato.home.footer1,
     copyright: dato.home.copyright,
     // iterate over all the `social_profile` item types
     socialProfiles: dato.socialProfiles.map(profile => {
