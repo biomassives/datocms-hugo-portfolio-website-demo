@@ -5,6 +5,10 @@
 
 <div class="container-footer w-container" >
     <div class="w-row">
+      {{ .Site.Data.settings.footer1 | safeHTML }}
+    </div>
+      
+    <div class="w-row">
       <div class="footer-column w-col w-col-2" style="flex:auto;"></div>
 
       <div class="footer-column w-clearfix w-col w-col-4"><img src="https://scdhub.org/images/logo.svg" alt="" width="40" class="scdhub-logo-image">
