@@ -81,7 +81,7 @@ module.exports = (dato, root, i18n) => {
       seoMetaTags: toHtml(dato.donatePage.seoMetaTags),
       menu: { main: { weight: 100 } }
     },
-    content: dato.donatePage.bio
+    content: dato.donatePage.content
   });
 
     // Create a markdown file with content coming from the `about_page` item
