@@ -124,7 +124,7 @@ module.exports = (dato, root, i18n) => {
       dir.createPost(`${blog.slug}.md`, 'yaml', {
         frontmatter: {
           title: blog.title,
-          coverImage: blog.coverImage.url({ w: 523, fm: 'webp', auto: 'compress' }),
+          coverImage: blog.coverImage.url({ w: 635, fm: 'webp', auto: 'compress' }),
           image: blog.coverImage.url({ fm: 'jpg', auto: 'compress' }),
           detailImage: blog.coverImage.url({ w: 600, fm: 'jpg', auto: 'compress' }),
           excerpt: blog.excerpt,
@@ -152,7 +152,7 @@ module.exports = (dato, root, i18n) => {
       dir.createPost(`${service.slug}.md`, 'yaml', {
         frontmatter: {
           title: service.title,
-          coverImage: service.coverImage.url({ w: 523, fm: 'webp', auto: 'compress' }),
+          coverImage: service.coverImage.url({ w: 635, fm: 'webp', auto: 'compress' }),
           image: service.coverImage.url({ fm: 'jpg', auto: 'compress' }),
           detailImage: service.coverImage.url({ w: 600, fm: 'webp', auto: 'compress' }),
           excerpt: service.excerpt,
