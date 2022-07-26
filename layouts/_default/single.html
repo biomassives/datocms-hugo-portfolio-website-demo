@@ -15,6 +15,9 @@
       {{ .Content }}
     </div>
     
+    {{ if eq .Title "Contact" }}
+    <iframe src="https://us7.list-manage.com/contact-form?u=9793533008f558091af54dc45&form_id=a8b06d830b90d68bf238b5360ba76563"></iframe>
+    {{end}}    
        {{ if eq .Title "Donate" }}
    <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
 <stripe-pricing-table pricing-table-id="prctbl_1LPaylB6DupeNhuIuwwdM1lq"
