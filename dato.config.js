@@ -84,6 +84,20 @@ module.exports = (dato, root, i18n) => {
     },
     content: dato.donatePage.content
   });
+  
+  
+  
+  // Create a markdown file with content coming from the `about_page` item
+  // type stored in DatoCMS
+  root.createPost(`content/donate_scdhub.md`, 'yaml', {
+    frontmatter: {
+      title: dato.donateScdhub.title,
+      subtitle: dato.donateScdhub.subtitle,
+      seoMetaTags: toHtml(dato.donateScdhub.seoMetaTags),
+      menu: { main: { weight: 100 } }
+    },
+    content: dato.donateScdhub.content
+  });
 
     // Create a markdown file with content coming from the `about_page` item
   // type stored in DatoCMS
