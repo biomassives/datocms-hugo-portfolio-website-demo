@@ -5,6 +5,14 @@
     <h1 class="sheet__title">{{ .Title }}</h1>
     <h3 class="sheet__subtitle">{{ .Params.subtitle }}</h3>
     <p class="sheet__lead">{{ .Params.excerpt }}</p>
+    
+    {{ if eq .Title "Donate" }}
+   <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+<stripe-pricing-table pricing-table-id="prctbl_1LPaylB6DupeNhuIuwwdM1lq"
+publishable-key="pk_live_51I48UGB6DupeNhuIjO5eoDqXJ617wevepUhMyU3e63P1t4oYzWZR8Yu82sSG96I50UsMh0DBBfwqjI15FFuJDCJx00A6nAtQJw">
+</stripe-pricing-table>
+{{end}}
+    
     <div class="sheet__gallery">
       <img src="{{ .Params.photo }}" />
     </div>
@@ -14,12 +22,7 @@
   </div>
 </article>
 
-{{ if eq .Title "Donate" }}
-   <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-<stripe-pricing-table pricing-table-id="prctbl_1LPaylB6DupeNhuIuwwdM1lq"
-publishable-key="pk_live_51I48UGB6DupeNhuIjO5eoDqXJ617wevepUhMyU3e63P1t4oYzWZR8Yu82sSG96I50UsMh0DBBfwqjI15FFuJDCJx00A6nAtQJw">
-</stripe-pricing-table>
-{{end}}
+
 
 
 {{ partial "footer.html" . }}
