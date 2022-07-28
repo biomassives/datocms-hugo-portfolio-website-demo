@@ -329,6 +329,9 @@ strong.link-email-footer {
 .mobile-header__logo a {
           color: #fff !important;
 }
+  .navmenu:nth-child(1) {
+  display: none;
+}
     </style>
   </head>
   <body>
@@ -341,7 +344,7 @@ strong.link-email-footer {
           <ul class="sidebar__menu">
             {{ $currentNode := . }}
             {{ range .Site.Menus.main }}
-              <li{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} class="is-active"{{end}}>
+              <li class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}is-active{{end}} navmenu">
                 <a href="{{ .URL }}">{{ .Name }}</a>
               </li>
             {{ end }}
