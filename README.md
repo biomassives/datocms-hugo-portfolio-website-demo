@@ -1,7 +1,16 @@
 # SCD Hub Website
 
 -
-uses datocms.com for content and hugo build tool from code on github.com, built via netlify.com or vercel.com
+
+
+* content managed on datocms.com
+
+* hugo code generator
+
+* code versioned on github.com, 
+
+* built via netlify.com
+
 -
 customized template removing hamburger sidebar interaction
 
