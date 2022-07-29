@@ -47,10 +47,7 @@
     <iframe src="https://us7.list-manage.com/contact-form?u=9793533008f558091af54dc45&#38;form_id=a8b06d830b90d68bf238b5360ba76563" title="W3Schools Free Online Web Tutorials"></iframe>
     {{end}}    
     {{ if eq .Title "Donate" }}
-     <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-     <stripe-pricing-table pricing-table-id="prctbl_1LQNIzBGWz4zOz71b0LjRtKM"
-     publishable-key="pk_live_9QpzO4ynVn0Yqon2Ui6sZzGN">
-     </stripe-pricing-table>
+     {{ partial "pricing_table.html" . }}
     {{end}}
     
   </div>
