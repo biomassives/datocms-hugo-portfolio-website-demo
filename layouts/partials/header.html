@@ -368,12 +368,9 @@ strong.link-email-footer {
           {{ if .IsHome }}
             <div class="textheader">
               <div class="headercontent">
-                {{ .Site.Data.settings.intro | markdownify }}
-                
+                {{ .Site.Data.settings.intro | markdownify }}            
                 <BR>
-                  <div style="width:auto; display: block; position: relative;">
-                    <a href="/donate"><img src="https://www.datocms-assets.com/76676/1658875786-fundraider_student-support.gif" style="width:auto;" border=0 id="promo_banner"></a>
-                  </div>
+                <a href="/donate"><img src="https://www.datocms-assets.com/76676/1658875786-fundraider_student-support.gif" style="width:auto;" border=0 id="promo_banner"></a>
               </div>
             </div>
           {{ end }}
