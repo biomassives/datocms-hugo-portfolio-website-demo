@@ -318,13 +318,14 @@ strong.link-email-footer {
 }
   
   @font-face {
-    font-family: Aleo;
+    font-family: nothingYouCouldDo;
     src: url('/nothing-you-could-do-v15-latin-regular.eot');
     src: local('Arial'), url('/nothing-you-could-do-v15-latin-regular.woff2') format('woff'), url('/nothing-you-could-do-v15-latin-regular.ttf') format('truetype');   
 }  
    
 .headercontent {
-          font-family: Aleo;
+          font-family: nothingYouCouldDo;
+          font-size: 21px;
           display: flex;
 }
 .mobile-header__logo {
@@ -345,7 +346,7 @@ strong.link-email-footer {
     
     <div class="container">
       <div class="container__sidebar">
-          <img title="{{ .Site.Data.settings.name }}" src="https://www.datocms-assets.com/76676/1659136185-scd2022.png" style="position:relative;top:-10px;">
+          <img title="{{ .Site.Data.settings.name }}" src="https://www.datocms-assets.com/76676/1659136185-scd2022.png" style="height:254px;width:258px;position:relative;top:-54px;">
           <ul class="sidebar__menu">
             {{ $currentNode := . }}
             {{ range .Site.Menus.main }}
@@ -372,13 +373,11 @@ strong.link-email-footer {
           {{ if .IsHome }}
             <div class="textheader">
               <div class="headercontent">
-                <h2>
                 {{ .Site.Data.settings.intro | markdownify }}            
-                </h2>
               </div>
             </div> 
              <div style="display: flex;">
-               <a href="https://checkout.stripe.com/pay/cs_live_a1HoBKkmCrqyT9yY5nfHCktkUince1A6Vqa4Rox27CKjMC4vxcYafk7NzI#fidkdWxOYHwnPyd1blppbHNgWjxUdX9KMXxrU2s1XHRqazdQbDN2X39CSycpJ3VpbGtuQH11anZgYUxhJz8nZEBQYjcwME5iNUhOZm1KY189J3gl"><img src="https://www.datocms-assets.com/76676/1659134949-scdhub_fundraiser_students2022.png" style="width:100%;" border=0 id="promo_banner"></a>
+               <a href="/donate"><img src="https://www.datocms-assets.com/76676/1659144143-scdhub_fundraiser_students2022.png" style="width:100%;" border=0 id="promo_banner"></a>
              </div>
           {{ end }}
         
