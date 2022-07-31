@@ -2,8 +2,9 @@
 
 <article class="sheet">
   <div class="sheet__inner">
-{{ if ne .Title "EcoSchool" }}
-    <h1 class="sheet__title">{{ .Title }}</h1>
+{{ if eq .Title "EcoSchool" }}
+{{ else }}
+    <h1 class="sheet__title">{{ .Title }}</h1>  
 {{ end }}
 	  
     <h3 class="sheet__subtitle">{{ .Params.subtitle }}</h3>
