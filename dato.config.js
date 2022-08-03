@@ -45,6 +45,7 @@ module.exports = (dato, root, i18n) => {
     language: dato.site.locales[0],
     intro: dato.home.introText,
     footer1: dato.home.footer1,
+    footer1: dato.home.,
     copyright: dato.home.copyright,
     // iterate over all the `social_profile` item types
     socialProfiles: dato.socialProfiles.map(profile => {
@@ -111,6 +112,21 @@ module.exports = (dato, root, i18n) => {
     },
     content: dato.newsletterPage.content
   });
+  
+  // Create a markdown file with content coming from the `ecoopsapp` item
+  // type stored in DatoCMS
+  root.createPost(`content/ecoopsapp.md`, 'yaml', {
+    frontmatter: {
+      title: dato.ecoopsappPage.title,
+      subtitle: dato.ecoopsappPage.subtitle,
+      photo: dato.ecoopsappPage.photo.url({ w: 800, fm: 'webp', auto: 'compress' }),
+      seoMetaTags: toHtml(dato.ecoopsappPage.seoMetaTags),
+      menu: { main: { weight: 100 } }
+    },
+    content: dato.ecoopsappPage.content
+  });
+  
+  
 
   
   // Create a markdown file with content coming from the `about_page` item
