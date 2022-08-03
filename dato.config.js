@@ -45,7 +45,7 @@ module.exports = (dato, root, i18n) => {
     language: dato.site.locales[0],
     intro: dato.home.introText,
     footer1: dato.home.footer1,
-    footer1: dato.home.,
+    footer1: dato.home.gallery,
     copyright: dato.home.copyright,
     // iterate over all the `social_profile` item types
     socialProfiles: dato.socialProfiles.map(profile => {
