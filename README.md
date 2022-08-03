@@ -1,6 +1,6 @@
 # SCD Hub Website
 
--
+
 
 
 * content managed on datocms.com
@@ -11,8 +11,8 @@
 
 * built via netlify.com
 
--
-customized template removing hamburger sidebar interaction
+
+customized template removing sidebar navigation interaction in sass
 
 This repo contains a working static website written with [Hugo](http://gohugo.io/), integrated with content coming from DatoCMS.
 
@@ -34,6 +34,7 @@ npm install
 ```
 
 Add an `.env` file containing the read-only API token of your DatoCMS site:
+Get your API token free at https://datocms.com
 
 ```
 echo 'DATO_API_TOKEN=abc123' >> .env
