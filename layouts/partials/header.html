@@ -343,12 +343,12 @@ strong.link-email-footer {
     
     
     <div class="container">
-      <div class="container__sidebar" style="margin-right: 15px;">
+      <div class="container__sidebar" style="margin-right: 15px; .navmenu:nth-child(2) {  display: none; }">
           <img title="{{ .Site.Data.settings.name }}" src="https://www.datocms-assets.com/76676/1659223418-scd2022.png" style="position:relative;top:-24px;">
           <ul class="sidebar__menu">
             {{ $currentNode := . }}
             {{ range .Site.Menus.main }}
-              <li class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}is-active{{end}} navmenu">
+              <li if class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}is-active{{end}} navmenu">
                 <a href="{{ .URL }}">{{ .Name }}</a>
               </li>
             {{ end }}
