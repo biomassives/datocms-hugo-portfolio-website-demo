@@ -336,7 +336,7 @@ strong.link-email-footer {
           color: #fff !important;
 }
   
-.navmenu:nth-child(2) {  
+.navmenu:nth-child(3) {  
           display: none; 
 }  
   
@@ -353,9 +353,17 @@ strong.link-email-footer {
           <ul class="sidebar__menu">
             {{ $currentNode := . }}
             {{ range .Site.Menus.main }}
+            
+              {{if ne .URL "/ecoopsapp"}}
               <li if class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}is-active{{end}} navmenu">
                 <a href="{{ .URL }}">{{ .Name }}</a>
               </li>
+              {{ else }}
+              <li if class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}is-active{{end}} navmenu">
+                <a href="{{ .URL }}">Eco Ops App</a>
+              </li>
+              {{ end }}
+
             {{ end }}
           </ul>
           <p class="sidebar__social">

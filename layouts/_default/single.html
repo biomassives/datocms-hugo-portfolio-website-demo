@@ -23,35 +23,53 @@
       {{ .Content }}
     </div>
     
-{{ if eq .Title "Eco ops app" }}
+{{ if eq .Title "Eco Operations app, supporting cooperative resource management & carbon credit tool" }}
 	 
 	  
 	  <!-- include isotope ui with data from supabase and datocms for projects action lists and accomplishments transparency -->
 	  <script src="https://unpkg.com/packery@2/dist/packery.pkgd.js"></script>
 	  <!--  <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>  -->
 	  
+
+	  
+
+	  <link rel="stylesheet href="https://packery.metafizzy.co/css/packery-docs.css">
+	  {{ partial "ecoopsapp_masonry.html" . }}
+																     
+																     
+
 	  <style>
-		  .grid-item { width: 25%; }
-		  .grid-item--width2 { width: 50%; }
+		  .grid { width: 80%; }
+		  .grid-item { width: 15%; }
+		  .grid-item--width2 { width: 35%; background: #434534; }
+		  .grid-item--width3 { width: 25%; background: #200345; }
 	  </style>
 	  <div class="grid">
 		  <div class="grid-item">...</div>
   		  <div class="grid-item grid-item--width2">...</div>
- 		  <div class="grid-item">...</div>
+ 		  <div class="grid-item">secure</div>
   		  <div class="grid-item grid-item--width2">...</div>
   		  <div class="grid-item grid-item--width2">...</div>
-  		  <div class="grid-item grid-item--width2">...</div>
-  		  <div class="grid-item grid-item--width2">...</div>
- 		  <div class="grid-item">...</div>
-  		  <div class="grid-item grid-item--width2">...</div>
- 		  <div class="grid-item">...</div>
+  		  <div class="grid-item grid-item--width3">...</div>
+ 		  <div class="grid-item">free</div>
   		  <div class="grid-item grid-item--width2">...</div>
   		  <div class="grid-item grid-item--width2">...</div>
  		  <div class="grid-item">...</div>
   		  <div class="grid-item grid-item--width2">...</div>
+ 		  <div class="grid-item">powerful</div>
+  		  <div class="grid-item grid-item--width2">...</div>
   		  <div class="grid-item grid-item--width2">...</div>
  		  <div class="grid-item">...</div>
+ 		  <div class="grid-item">real time</div>
   		  <div class="grid-item grid-item--width2">...</div>
+  		  <div class="grid-item grid-item--width3">...</div>
+  		  <div class="grid-item grid-item--width2">...</div>
+ 		  <div class="grid-item">technical stuff</div>
+  		  <div class="grid-item grid-item--width2">...</div>
+ 		  <div class="grid-item">...</div>
+ 		  <div class="grid-item">...</div>
+ 		  <div class="grid-item">...</div>
+  		  <div class="grid-item grid-item--width2">carbon trading</div>
  		  <div class="grid-item">...</div>
 </div>
 
