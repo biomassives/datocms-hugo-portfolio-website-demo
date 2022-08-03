@@ -30,16 +30,20 @@
 	  <script src="https://unpkg.com/packery@2/dist/packery.pkgd.js"></script>
 	  <!--  <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>  -->
 	  
+
+	  
+
+	  <link rel="stylesheet href="https://packery.metafizzy.co/css/packery-docs.css">
+	  {{ partial "ecoopsapp_masonry.html" . }}
+																     
+																     
+
 	  <style>
 		  .grid { width: 80%; }
 		  .grid-item { width: 15%; }
 		  .grid-item--width2 { width: 35%; background: #434534; }
 		  .grid-item--width3 { width: 25%; background: #200345; }
 	  </style>
-	  
-	  {{ partial "ecoopsapp_masonry.html" . }}
-	  
-	  
 	  <div class="grid">
 		  <div class="grid-item">...</div>
   		  <div class="grid-item grid-item--width2">...</div>
