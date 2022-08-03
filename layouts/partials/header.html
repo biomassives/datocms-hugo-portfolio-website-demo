@@ -354,7 +354,7 @@ strong.link-email-footer {
             {{ $currentNode := . }}
             {{ range .Site.Menus.main }}
             
-              {{if ne .URL "ecoopsapp"}}
+              {{if ne .URL "/ecoopsapp"}}
               <li if class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}is-active{{end}} navmenu">
                 <a href="{{ .URL }}">{{ .Name }}</a>
               </li>
