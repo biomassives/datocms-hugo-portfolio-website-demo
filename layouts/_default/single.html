@@ -23,6 +23,58 @@
       {{ .Content }}
     </div>
     
+{{ if eq .Title "Eco ops app" }}
+	 
+	  
+	  <!-- include isotope ui with data from supabase and datocms for projects action lists and accomplishments transparency -->
+	  <script src="https://unpkg.com/packery@2/dist/packery.pkgd.js"></script>
+	  <!--  <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>  -->
+	  
+	  <style>
+		  .grid-item { width: 25%; }
+		  .grid-item--width2 { width: 50%; }
+	  </style>
+	  <div class="grid">
+		  <div class="grid-item">...</div>
+  		  <div class="grid-item grid-item--width2">...</div>
+ 		  <div class="grid-item">...</div>
+  		  <div class="grid-item grid-item--width2">...</div>
+  		  <div class="grid-item grid-item--width2">...</div>
+  		  <div class="grid-item grid-item--width2">...</div>
+  		  <div class="grid-item grid-item--width2">...</div>
+ 		  <div class="grid-item">...</div>
+  		  <div class="grid-item grid-item--width2">...</div>
+ 		  <div class="grid-item">...</div>
+  		  <div class="grid-item grid-item--width2">...</div>
+  		  <div class="grid-item grid-item--width2">...</div>
+ 		  <div class="grid-item">...</div>
+  		  <div class="grid-item grid-item--width2">...</div>
+  		  <div class="grid-item grid-item--width2">...</div>
+ 		  <div class="grid-item">...</div>
+  		  <div class="grid-item grid-item--width2">...</div>
+ 		  <div class="grid-item">...</div>
+</div>
+
+	  
+<!--
+          If you are creating an open source application under a license compatible with the GNU GPL license v3, 
+	  you may use Packery under the terms of the GPLv3. Read more about Packery open source licensing.
+-->	
+	<script>
+		var elem = document.querySelector('.grid');
+		var pckry = new Packery( elem, {
+ 		 // options
+ 		 itemSelector: '.grid-item',
+ 		 gutter: 10
+		});
+
+		// element argument can be a selector string
+		//   for an individual element
+		var pckry = new Packery( '.grid', {
+		  // options
+		});	  
+	  </script>
+{{ end }}	  
   
 {{ if eq .Title "Contact" }}
   
