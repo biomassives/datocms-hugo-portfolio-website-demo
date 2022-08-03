@@ -1,8 +1,6 @@
 {{ partial "header.html" . }}
 
 <div class="showcase is-loading" style="visibility:none; display: flex;" {{ if .Paginator.HasNext }}data-next-url="{{ .Paginator.Next.URL }}"{{ end }}>
-
-        
         
   {{ range (where .Paginator.Pages "Type" "services") }}
     <div class="showcase__item">
@@ -20,9 +18,6 @@
   {{ end }}
 </div>
 
-
 {{ partial "pricing_table.html" . }}
 
 {{ partial "footer.html" . }}
-
-
