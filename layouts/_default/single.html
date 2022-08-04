@@ -26,6 +26,31 @@
 {{ if eq .Title "Eco Operations app, supporting cooperative resource management & carbon credit tool" }}
 
 	  
+	     <div class="sheet__slider">
+      <div class="slider js_slider">
+        <div class="slider__frame js_frame">
+          <ul class="slider__slides js_slides">
+            {{ range .Params.extraimages }}
+              <li class="slider__slide js_slide">
+                <img src="{{ . }}">
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+        <span class="slider__prev js_prev"></span>
+        <span class="slider__next js_next"></span>
+      </div>
+    </div>
+    <div class="sheet__body">
+      {{ .Content }}
+    </div>
+    <div class="sheet__gallery">
+      <img src="{{ .Params.detailimage }}" />
+    </div>
+
+	  
+	  
+	  
 	  <script src="https://unpkg.com/packery@2/dist/packery.pkgd.js"></script>
 	  
 	  {{ partial "ecoopsapp_masonry.html" . }}
