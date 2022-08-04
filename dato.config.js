@@ -170,9 +170,6 @@ module.exports = (dato, root, i18n) => {
   
   
   
-  
-  
-  
   // Create a `service` directory (or empty it if already exists)...
   root.directory('content/services', dir => {
     // ...and for each of the services stored online...
@@ -196,4 +193,32 @@ module.exports = (dato, root, i18n) => {
     });
   });
 };
+
+
+
+  // Create a `work` directory (or empty it if already exists)...
+  root.directory('content/works', dir => {
+    // ...and for each of the works stored online...
+    dato.works.forEach((work, index) => {
+      // ...create a markdown file with all the metadata in the frontmatter
+      dir.createPost(`${work.slug}.md`, 'yaml', {
+        frontmatter: {
+          title: work.title,
+          coverImage: work.coverImage.url({ w: 450, fm: 'jpg', auto: 'compress' }),
+          image: work.coverImage.url({ fm: 'jpg', auto: 'compress' }),
+          detailImage: work.coverImage.url({ w: 600, fm: 'jpg', auto: 'compress' }),
+          excerpt: work.excerpt,
+          seoMetaTags: toHtml(work.seoMetaTags),
+          extraImages: work.gallery.map(item =>
+            item.url({ h: 300, fm: 'jpg', auto: 'compress' })
+          ),
+          weight: index
+        },
+        content: work.description
+      });
+    });
+  });
+};
+
+
 
