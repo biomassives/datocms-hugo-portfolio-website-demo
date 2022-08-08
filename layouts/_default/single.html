@@ -19,9 +19,13 @@
       <img src="{{ .Params.photo }}" />
     </div>
 {{ end }}
-	  <div class="sheet__body">
-      {{ .Content }}
-    </div>
+	  
+	  
+         <div class="sheet__body">
+ 		<table><tr><td>
+                     {{ .Content }}
+		</td></tr></table>	
+         </div>
     
 {{ if eq .Title "Eco Operations app, supporting cooperative resource management & carbon credit tool" }}
 
