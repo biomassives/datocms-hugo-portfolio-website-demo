@@ -46,9 +46,11 @@ module.exports = (dato, root, i18n) => {
     intro: dato.home.introText,
     footer1: dato.home.footer1,
     detailImage: dato.home.detailImage.url({ w: 600, fm: 'jpg', auto: 'compress' }),
-    extraImages: dato.home.gallery.map(item =>
+    extraImages: dato.home.gallery.map(item => {
+      return {
             url: item.url({ h: 300, fm: 'jpg', auto: 'compress' })
-    ),
+      };  
+    ),     
     copyright: dato.home.copyright,
     // iterate over all the `social_profile` item types
     socialProfiles: dato.socialProfiles.map(profile => {
