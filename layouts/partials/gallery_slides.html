@@ -5,7 +5,7 @@
       <div class="slider js_slider">
         <div class="slider__frame js_frame">
           <ul class="slider__slides js_slides">
-            {{ range .Params.extraImages.url }}
+            {{ range .Params.extraImages }}
               <li class="slider__slide js_slide">
                 <img src="{{ . }}">
               </li>
