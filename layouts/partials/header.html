@@ -382,6 +382,10 @@ strong.link-email-footer {
         
         
           {{ if .IsHome }}
+      
+      
+      {{ partial "css_slides.html" . }}
+      
             <div class="textheader">
               <div class="headercontent">
                 {{ .Site.Data.settings.intro | markdownify }}            
