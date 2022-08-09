@@ -22,6 +22,26 @@ You can check the [live version deployed on Netlify](https://portfolio-datocms-h
 
 or you can deploy your own, together with the administrative area, with this button:
 
+
+
+  {{ range (where .Paginator.Pages "Type" "services") }}
+    <div class="showcase__item">
+      <figure class="card">
+          <img src="{{ .Params.coverimage }}">
+        <figcaption class="card__caption">
+          <h6 class="card__title">{{ .Title }}
+          </h6>
+          <div class="card__description">
+            <p>{{ .Params.excerpt }}</p>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  {{ end }}
+</div>
+
+
+
 [![Deploy with DatoCMS](https://dashboard.datocms.com/deploy/button.svg)](https://dashboard.datocms.com/projects/new-from-template/static-website/hugo-portfolio)
 
 
