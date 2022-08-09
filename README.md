@@ -1,6 +1,6 @@
-# SCD Hub Website via Datocms / Netlify
+# SCD Hub Website via Hugo / vanilla js / Datocms / Netlify
 
-
+# stripe api integration in the works
 
 
 * content managed on datocms.com
