@@ -45,6 +45,7 @@ module.exports = (dato, root, i18n) => {
     language: dato.site.locales[0],
     intro: dato.home.introText,
     footer1: dato.home.footer1,
+    footer_medalions: dato.home.footer_medalions,
     detailImage: dato.home.detailImage.url({ w: 600, fm: 'jpg', auto: 'compress' }),
     extraImages: dato.home.gallery.map(item => {
       return {
